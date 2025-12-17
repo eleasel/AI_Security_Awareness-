@@ -120,6 +120,142 @@ const AlertIcon = () => (
   </svg>
 );
 
+// AI Brain/Neural Network Background Illustration
+const AIBrainIllustration = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 400 400" className={className} fill="none">
+    {/* Neural network nodes */}
+    <circle cx="200" cy="200" r="30" fill="url(#brainGrad)" opacity="0.6" />
+    <circle cx="120" cy="140" r="15" fill="url(#brainGrad)" opacity="0.4" />
+    <circle cx="280" cy="140" r="15" fill="url(#brainGrad)" opacity="0.4" />
+    <circle cx="100" cy="220" r="12" fill="url(#brainGrad)" opacity="0.3" />
+    <circle cx="300" cy="220" r="12" fill="url(#brainGrad)" opacity="0.3" />
+    <circle cx="140" cy="280" r="18" fill="url(#brainGrad)" opacity="0.4" />
+    <circle cx="260" cy="280" r="18" fill="url(#brainGrad)" opacity="0.4" />
+    <circle cx="200" cy="320" r="10" fill="url(#brainGrad)" opacity="0.3" />
+    <circle cx="80" cy="160" r="8" fill="url(#brainGrad)" opacity="0.2" />
+    <circle cx="320" cy="160" r="8" fill="url(#brainGrad)" opacity="0.2" />
+    
+    {/* Neural connections */}
+    <path d="M200 200 L120 140" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.3" />
+    <path d="M200 200 L280 140" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.3" />
+    <path d="M200 200 L100 220" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.2" />
+    <path d="M200 200 L300 220" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.2" />
+    <path d="M200 200 L140 280" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.3" />
+    <path d="M200 200 L260 280" stroke="url(#lineGrad)" strokeWidth="2" opacity="0.3" />
+    <path d="M120 140 L80 160" stroke="url(#lineGrad)" strokeWidth="1" opacity="0.2" />
+    <path d="M280 140 L320 160" stroke="url(#lineGrad)" strokeWidth="1" opacity="0.2" />
+    <path d="M140 280 L200 320" stroke="url(#lineGrad)" strokeWidth="1" opacity="0.2" />
+    <path d="M260 280 L200 320" stroke="url(#lineGrad)" strokeWidth="1" opacity="0.2" />
+    
+    {/* Animated pulses */}
+    <circle cx="200" cy="200" r="40" stroke="url(#brainGrad)" strokeWidth="1" opacity="0.2">
+      <animate attributeName="r" values="30;50;30" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="200" r="60" stroke="url(#brainGrad)" strokeWidth="1" opacity="0.1">
+      <animate attributeName="r" values="50;80;50" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.05;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <defs>
+      <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#60a5fa" />
+        <stop offset="100%" stopColor="#a78bfa" />
+      </linearGradient>
+      <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#60a5fa" />
+        <stop offset="100%" stopColor="#f472b6" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+// Floating Robot/Chatbot Illustration
+const RobotIllustration = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 200 200" className={className} fill="none">
+    {/* Robot head */}
+    <rect x="50" y="60" width="100" height="80" rx="20" fill="url(#robotGrad)" opacity="0.8" />
+    {/* Eyes */}
+    <circle cx="80" cy="100" r="12" fill="#0f172a">
+      <animate attributeName="r" values="12;10;12" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="120" cy="100" r="12" fill="#0f172a">
+      <animate attributeName="r" values="12;10;12" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="80" cy="100" r="6" fill="#60a5fa">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="120" cy="100" r="6" fill="#60a5fa">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    {/* Antenna */}
+    <line x1="100" y1="60" x2="100" y2="40" stroke="#60a5fa" strokeWidth="3" />
+    <circle cx="100" cy="35" r="8" fill="#f472b6">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite" />
+    </circle>
+    {/* Mouth */}
+    <rect x="70" y="120" width="60" height="8" rx="4" fill="#0f172a" opacity="0.5" />
+    {/* Body hint */}
+    <rect x="70" y="145" width="60" height="30" rx="8" fill="url(#robotGrad)" opacity="0.4" />
+    
+    <defs>
+      <linearGradient id="robotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#475569" />
+        <stop offset="100%" stopColor="#334155" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+// Floating circuit pattern for backgrounds
+const CircuitPattern = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" preserveAspectRatio="none">
+    <pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1.5" fill="currentColor" opacity="0.3" />
+      <path d="M10 0 V10 M10 10 H20" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+      <path d="M0 10 H10" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+    </pattern>
+    <rect width="100" height="100" fill="url(#circuit)" />
+  </svg>
+);
+
+// Floating warning/danger symbol
+const DangerSymbol = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none">
+    <polygon points="50,10 90,80 10,80" stroke="url(#dangerGrad)" strokeWidth="3" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite" />
+    </polygon>
+    <text x="50" y="60" textAnchor="middle" fill="url(#dangerGrad)" fontSize="30" fontWeight="bold" opacity="0.8">!</text>
+    <defs>
+      <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#f97316" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+// Lock/Security illustration
+const SecurityLock = ({ className = "" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none">
+    <rect x="25" y="45" width="50" height="40" rx="8" fill="url(#lockGrad)" opacity="0.7" />
+    <path d="M35 45 V35 A15 15 0 0 1 65 35 V45" stroke="url(#lockGrad)" strokeWidth="6" fill="none" strokeLinecap="round" />
+    <circle cx="50" cy="62" r="6" fill="#0f172a" />
+    <rect x="47" y="65" width="6" height="10" rx="2" fill="#0f172a" />
+    {/* Glow effect */}
+    <circle cx="50" cy="65" r="25" stroke="#22c55e" strokeWidth="2" opacity="0.3">
+      <animate attributeName="r" values="20;30;20" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <defs>
+      <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#22c55e" />
+        <stop offset="100%" stopColor="#10b981" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 const slides = [
   // Slide 1: Title
   {
@@ -132,6 +268,9 @@ const slides = [
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
           <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+          {/* AI Brain Illustration */}
+          <AIBrainIllustration className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-30" />
+          <RobotIllustration className="absolute -left-10 bottom-20 w-40 h-40 opacity-20 animate-float" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -260,6 +399,8 @@ const slides = [
       <div className="slide slide-dark">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-purple-900/20 to-transparent" />
+          <RobotIllustration className="absolute right-10 top-20 w-32 h-32 opacity-25 animate-float" />
+          <AIBrainIllustration className="absolute -left-32 bottom-10 w-72 h-72 opacity-15" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto w-full">
@@ -305,6 +446,9 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <div className="absolute inset-0 overflow-hidden">
+          <CircuitPattern className="absolute inset-0 w-full h-full text-cyan-400 opacity-30" />
+        </div>
         <div className="relative z-10 max-w-6xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-cyan-400 font-medium tracking-widest uppercase text-sm mb-4">Threat Landscape</p>
@@ -341,6 +485,7 @@ const slides = [
       <div className="slide slide-dark">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/20 to-transparent" />
+          <DangerSymbol className="absolute right-20 bottom-32 w-28 h-28 opacity-20" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto w-full">
@@ -390,6 +535,10 @@ const slides = [
     type: "case",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #1a0a0a 0%, #2d1515 50%, #1a0a0a 100%)" }}>
+        <div className="absolute inset-0 overflow-hidden">
+          <DangerSymbol className="absolute left-10 top-20 w-24 h-24 opacity-15" />
+          <DangerSymbol className="absolute right-20 bottom-20 w-32 h-32 opacity-10" />
+        </div>
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="px-4 py-1 bg-red-500 rounded-full text-sm font-bold tracking-wide">CASE STUDY</div>
@@ -431,6 +580,9 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <div className="absolute inset-0 overflow-hidden">
+          <DangerSymbol className="absolute left-10 bottom-20 w-20 h-20 opacity-15" />
+        </div>
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-orange-400 font-medium tracking-widest uppercase text-sm mb-4">Evolved Threat</p>
@@ -762,6 +914,9 @@ const slides = [
     type: "countermeasure",
     render: () => (
       <div className="slide slide-dark">
+        <div className="absolute inset-0 overflow-hidden">
+          <SecurityLock className="absolute right-16 bottom-24 w-36 h-36 opacity-15" />
+        </div>
         <div className="relative z-10 max-w-4xl mx-auto w-full">
           <div className="text-center mb-10">
             <div className={`inline-flex items-center gap-3 px-6 py-2 rounded-full bg-gradient-to-r ${cm.color} mb-6`}>
@@ -889,6 +1044,9 @@ const slides = [
     type: "summary",
     render: () => (
       <div className="slide slide-dark">
+        <div className="absolute inset-0 overflow-hidden">
+          <SecurityLock className="absolute right-10 top-24 w-28 h-28 opacity-15" />
+        </div>
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-amber-400 font-medium tracking-widest uppercase text-sm mb-4">Remember This</p>
@@ -928,6 +1086,8 @@ const slides = [
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
+          <AIBrainIllustration className="absolute -left-10 top-1/2 -translate-y-1/2 w-80 h-80 opacity-20" />
+          <SecurityLock className="absolute right-20 bottom-28 w-32 h-32 opacity-20" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
