@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState, useRef, createContext, useContext, ReactNode } from "react";
 import { LogoBanner } from './components/LogoBanner';
+import { useEffect, useState, useRef, createContext, useContext, ReactNode } from "react";
 
 // Context for speaker notes
 interface NoteContextType {
@@ -1314,6 +1314,8 @@ export default function Home() {
     </NoteContext.Provider>
   );
 }
+
+File 2: /src/app/components/LogoBanner.tsx
 
 export function LogoBanner() {
   return (
