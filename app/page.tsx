@@ -1,6 +1,5 @@
-"use client";
-
 import { useEffect, useState, useRef, createContext, useContext, ReactNode } from "react";
+import { LogoBanner } from "./components/LogoBanner";
 
 // Context for speaker notes
 interface NoteContextType {
@@ -263,6 +262,7 @@ const slides = [
     type: "title",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         {/* Background effects */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow" />
@@ -292,7 +292,7 @@ const slides = [
           </p>
 
           <p className="text-lg md:text-xl text-amber-400/80 font-medium tracking-wide">
-            Presented by Philemon Hini
+            Credit: Philemon Hini
           </p>
 
           <div className="mt-16 flex items-center justify-center gap-2 text-white/30 text-sm">
@@ -312,6 +312,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
@@ -355,6 +356,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-3xl" />
         </div>
@@ -401,6 +403,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-purple-900/20 to-transparent" />
           <RobotIllustration className="absolute right-10 top-20 w-32 h-32 opacity-25 animate-float" />
@@ -450,6 +453,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <CircuitPattern className="absolute inset-0 w-full h-full text-cyan-400 opacity-30" />
         </div>
@@ -487,6 +491,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-900/20 to-transparent" />
           <DangerSymbol className="absolute right-20 bottom-32 w-28 h-28 opacity-20" />
@@ -539,6 +544,7 @@ const slides = [
     type: "case",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #1a0a0a 0%, #2d1515 50%, #1a0a0a 100%)" }}>
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <DangerSymbol className="absolute left-10 top-20 w-24 h-24 opacity-15" />
           <DangerSymbol className="absolute right-20 bottom-20 w-32 h-32 opacity-10" />
@@ -584,6 +590,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <DangerSymbol className="absolute left-10 bottom-20 w-20 h-20 opacity-15" />
         </div>
@@ -625,6 +632,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-purple-400 font-medium tracking-widest uppercase text-sm mb-4">Identity Fraud</p>
@@ -668,6 +676,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-yellow-400 font-medium tracking-widest uppercase text-sm mb-4">Internal Risk</p>
@@ -719,6 +728,7 @@ const slides = [
     type: "case",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #1a1500 0%, #2d2000 50%, #1a1500 100%)" }}>
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="px-4 py-1 bg-amber-500 text-black rounded-full text-sm font-bold tracking-wide">CASE STUDY</div>
@@ -759,6 +769,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-cyan-400 font-medium tracking-widest uppercase text-sm mb-4">Current State</p>
@@ -795,6 +806,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-red-400 font-medium tracking-widest uppercase text-sm mb-4">Critical Risks</p>
@@ -834,6 +846,7 @@ const slides = [
     type: "case",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="px-4 py-1 bg-orange-500 text-black rounded-full text-sm font-bold tracking-wide">EXAMPLE</div>
@@ -874,6 +887,7 @@ const slides = [
     type: "summary",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #0a1628 0%, #0d2818 50%, #0a1628 100%)" }}>
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <p className="text-emerald-400 font-medium tracking-widest uppercase text-sm mb-4">Summary</p>
@@ -918,6 +932,7 @@ const slides = [
     type: "countermeasure",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <SecurityLock className="absolute right-16 bottom-24 w-36 h-36 opacity-15" />
         </div>
@@ -955,6 +970,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gradient">Practical Guidelines</h2>
@@ -1006,6 +1022,7 @@ const slides = [
     type: "content",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #1a1033 0%, #0d1a33 100%)" }}>
+        <LogoBanner />
         <div className="relative z-10 max-w-5xl mx-auto w-full">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
@@ -1048,6 +1065,7 @@ const slides = [
     type: "summary",
     render: () => (
       <div className="slide slide-dark">
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <SecurityLock className="absolute right-10 top-24 w-28 h-28 opacity-15" />
         </div>
@@ -1087,6 +1105,7 @@ const slides = [
     type: "final",
     render: () => (
       <div className="slide" style={{ background: "linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0284c7 100%)" }}>
+        <LogoBanner />
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
@@ -1293,3 +1312,4 @@ export default function Home() {
     </NoteContext.Provider>
   );
 }
+
