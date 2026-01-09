@@ -1316,7 +1316,6 @@ export default function Home() {
   );
 }
 File 2: /src/app/components/LogoBanner.tsx
-import dtiLogo from "figma:asset/9ab4b22e34a8a5f7a93f43fa66b08413f97025fc.png";
 
 export function LogoBanner() {
   return (
