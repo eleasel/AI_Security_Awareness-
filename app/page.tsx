@@ -1314,7 +1314,6 @@ export default function Home() {
     </NoteContext.Provider>
   );
 }
-File 2: /src/app/components/LogoBanner.tsx
 
 export function LogoBanner() {
   return (
