@@ -290,12 +290,20 @@ const slides = [
           <div className="divider-gold mx-auto my-8" />
 
           <p className="text-xl md:text-2xl text-white/60 font-light tracking-wide mb-6">
-            A Cyber Awareness Session for Staff
+            DTI Cyber Awareness Session For Staff
           </p>
 
           <p className="text-lg md:text-xl text-amber-400/80 font-medium tracking-wide">
-            Credit: Philemon Hini
-          </p>
+  Credit:{" "}
+  <a
+    href="https://www.linkedin.com/in/philemon-ade-hini/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-amber-400 hover:text-amber-300 underline decoration-amber-400/50 hover:decoration-amber-300 underline-offset-4 transition-all duration-200"
+  >
+    Philemon Hini
+  </a>
+</p>
 
           <div className="mt-16 flex items-center justify-center gap-2 text-white/30 text-sm">
             <span>Scroll to begin</span>
@@ -1314,4 +1322,3 @@ export default function Home() {
     </NoteContext.Provider>
   );
 }
-
