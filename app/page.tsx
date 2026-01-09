@@ -2,7 +2,6 @@
 
 import { LogoBanner } from './components/LogoBanner';
 import { useEffect, useState, useRef, createContext, useContext, ReactNode } from "react";
-
 // Context for speaker notes
 interface NoteContextType {
   showNote: (title: string, note: string) => void;
